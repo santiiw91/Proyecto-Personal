@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto:wght@300;400;700&display=swap');
+
+/*Comenzamos con buenas practicas😄*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poor Story', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 auto;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    }
+/* Esta es la barra de notificaciones (en este caso envio gratis) */ 
+.enviosgratis {
+
+    background-color: black;
+    color: White;
+    height: 20px;
+    width: 120%;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 30px;
+    -webkit-box-shadow: 3px 4px 9px 6px rgba(162, 162, 162, 0.74);
+    box-shadow: 3px 4px 9px 6px rgba(162, 162, 162, 0.74);
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.header {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+/* Configuramos el menu de navegacion */
+nav {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+}
+
+.nav__items--cta {
+    color: black;
+    flex: 1;
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+    font: bolder;
+}
+
+nav li a:hover {
+    color: rgb(250, 250, 250);
+    background-color: rgb(119, 119, 119);
+    text-decoration: none;
+    transform: scale(4);
+    transition: all 400ms linear
+}
+/*Termina el menu de navageacion */
+
+/* Search box*/
+.search-box {
+    padding-top: 1rem;
+}
+.buscador {
+    padding-top: 16px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscador img {
+    height: 30px;
+}
+
+/*El main del index */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    margin-top: 4rem;
+}
+
+/* Estas son las tarjetas de los productos destacados */
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: white;
+    align-content: column;
+}
+
+
+
+.card .text {
+    padding: 0 23px 0px;
+    height: 200px;
+}
+/* BOTONES DE LAS CARDS*/
+.card button {
+    background: gray;
+    border: 1px solid;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    align-self: center;
+    margin-bottom: 12px;
+    border-radius: 20px;
+}
+
+#main_box {
+
+    margin: auto;
+    width: 70%;
+    height: 100%;
+
+}
+
+.text h3, p, button {
+    margin-top: 1rem;
+}
+
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.text { 
+    align-items: center;
+}
+
+.card img {
+    height: 200px;
+    max-width: 100%;
+    margin: 10px 5px 10px 5px;
+    justify-self: center;    
+}
+
+footer {
+    background-color: rgb(59, 59, 59);
+    height: 100%;
+    margin-top: 2rem;
+    width: 100%;
+    border: 1px solid blue;
+    text-align: center;
+}
+
+.footer_nav_links,
+li {
+    color: rgb(236, 236, 236);
+    list-style: none;
+    text-decoration: none;
+    font: bolder;
+    text-align: start;
+}
+
+.footer_box {
+    display: flex;
+    justify-content: center;
+    color: white;
+    ;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer_nav_links:hover {
+    color: black;
+    background-color: white;
+}
+
+/* HAY QUE TERMINAR DE HACE EL INDEX.
+     BUSCAR LAS FOTOS DE LAS CHAQUETAS
+     HACER UN TABLE CON TABLA DE MEDIDAS (EN MODO ESTA LA INFO)
+     HACER EL FOOTE*/
+.footer_container {
+    width: 70%;
+    height: 250px;
+border-style: solid;
+display: inline-block;
+text-align: center;
+align-items: center;
+}
+.cardlogo{
+height: 30px;
+border-style: solid; color: white;
+background-color: white;
+}
+.footer_div_nav_text_uppercase {
+    text-transform:uppercase;
+    color: white;
+    
+}
+.site-footer{
+    background-color:#26272b;
+    padding: 20px 0px 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+}
+.iconbox {
+    display: flex;
+}
+
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+
+.footer-links {
+    margin-left: 10px;
+}
+
+.copyright-text
+{
+bottom:30px}
+
+.social-icons{
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none
+}
+.social-icons li{
+    display:inline-block;
+    margin-bottom:4px
+}
+.iconbox img{
+    height: 80px;
+    padding: 1rem;
+}
+.elementfooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 2rem;    
+}
+
+button {
+    display: inline-block;
+    position: relative;
+    color: #19aae6;
+    background: #ffffff;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 16px 24px;
+    margin: 20px ;
+    border: 2px solid #19aae6;
+    border-radius: 8px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+button:before {
+content: "";
+position: absolute;
+background: #19aae6;
+height: 300px;
+width: 200px;
+border-radius: 8px;
+z-index: -1;
+
+}
+
+button:hover {
+    color: #ffffff
+
+}
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.7s;
+}
+
+button:hover:before {
+    top: 0px;
+    left: 0px;
+}
+
+button:active:before {
+    background: #3a0ca3;
+}
+
+/* REGISTRO.HTML*/
+.form-register{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid #28427a;
+    padding: 12px;
+    background: #445170;
+    border-radius: 6px;
+}
+.controls{
+    height: 2.5rem;
+    width: 100%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+h4{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: white;
+}
