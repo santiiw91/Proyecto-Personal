@@ -15,7 +15,7 @@
 <body>
     <!--Aca comineza el header-->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-transparent fixed-top">
+        <nav class="navbar navbar-expand-lg bg-body-transparent">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html"><img src="../img/BANGBUENOSAIRES.png"
                         alt="Logo Bang Buenos Aires" width="200px "></a>
@@ -52,76 +52,96 @@
                         </li>
                     </ul>
                 </div>
-                <form class="d-flex" role="search">
+                <form class="d-flex d-none d-sm-block" role="search">
                     <input class="form-control me-2" type="search" placeholder="Busca tu producto" aria-label="Search">
-                    <button class="btn btn-outline " type="submit">Buscar</button>
+                    <button class="btn btn-outline border" type="submit">Buscar</button>
                 </form>
             </div>
         </nav>
         <!-- Termina el header 😍-->
     </header>
-    <main class="main_box" id="main_box">
-        <!-- Comienza el main  -->
-        <div class="productosdestacados">
-            <h1>PRODUCTOS DESTACADOS</h1>
-            <!-- Aca tenemos la section de los productos destacados-->
-            <section class=" cards">
-                <article class="card">
-                    <img src="../img/delantal de cuero.jpg" alt="foto">
-                    <div class="text">
-                        <h3>Delantal de Jean con Cuero Marrón</h3>
-                        <p>Talle Unico con calze ajustable, apto para todas las medidas. Material resistente y duradero.
-                        </p>
+    <main class="main-preguntas" id="main-preguntas">
+        <section class="container-fluid">
+            <div class="accordion accordion-flush p-5 mx-auto w-75" id="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Hacen Envíos ?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordion">
+                        <div class="accordion-body">Si, hacemos envíos a todo el país.</div>
                     </div>
-                    <button>Agregar al carrito</button>
-                </article>
-                <article class="card">
-                    <img src="../img/chaquetablanca.jpg" alt="foto">
-                    <div class="text">
-                        <h3>Chaqueta de Chef Over</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut velit consequatur quibusdam,
-                            illum, similique molestiae </p>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Cuanto sale el envío?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordion">
+                        <div class="accordion-body">Las compras a partir de $15.000 tienen envío gratis a todo el país.
+                            Si no depende de la localidad.</div>
                     </div>
-                    <button>Agregar al carrito</button>
-                </article>
-                <article class="card">
-                    <img src="../img/chaquetanegra.jpg" alt="oto">
-                    <div class="text">
-                        <h3>Chaqueta de Chef Cross</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut velit consequatur quibusdam,
-                            illum, similique molestiae</p>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Tienen cambio los productos?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordion">
+                        <div class="accordion-body">Si, los productos tienen cambio. Disponers de 15 días para cambiar tu producto. Pasada esa fecha ya no podrias realizar el cambio.</div>
                     </div>
-                    <button>Agregar al carrito</button>
-                </article>
-                <article class="card">
-                    <img id="delantalnegro" src="../img/delantal_jean_negro.png.crdownload" alt="photo">
-                    <div class="text">
-                        <h3>Delantal de Jean Negro con Cuero</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut velit consequatur quibusdam,
-                            illum, similique molestiae</p>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            Que medios de pago aceptan?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#accordion">
+                        <div class="accordion-body">Aceptamos tarjeta de crédito y débito, transferencia bancaria, dinero en tu cuenta de mercado pago o efectivo a través de depósito bancario o cupon de Rapipago o Pago Fácil. Las ordenes impagas se mantienen abiertas por 3 días, pasado ese plazo se cancelan y los productos vuelven a estar a la venta. Recordá que si abonas por transferencia debés enviar el comprobante con número de orden de compra al mail para que podamos acreditar el pago.</div>
                     </div>
-                    <button>Agregar al carrito</button>
-                </article>
-                <article class="card">
-                    <img src="../img/chaquetademujerblanca.jpg" alt="photo">
-                    <div class="text">
-                        <h3>Women Jacket White</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut velit consequatur quibusdam,
-                            illum, similique molestiae</p>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                            Donde puedo ver las medidas de cada talle?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                        data-bs-parent="#accordion">
+                        <div class="accordion-body">Podés ver nuestra tabla de talles <a href="#">ACÁ</a> </div>
                     </div>
-                    <button>Agregar al carrito</button>
-                </article>
-                <article class="card">
-                    <img src="../img/chaquetademujernegra.jpg" alt="photo">
-                    <div class="text">
-                        <h3>Women Jacket Black</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut velit consequatur quibusdam,
-                            illum, similique molestiae</p>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSix" aria-expanded="false"
+                            aria-controls="flush-collapseSix">
+                           Como me puedo contactar con ustedes?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                        data-bs-parent="#accordion">
+                        <div class="accordion-body">Podés escribirnos por mail a bang@gmail.com y también nos encontras en <a href="www.instagram.com">Instagram</a>. <br>Para consultas sobre pedidos realizados tenes que escrirnos al mail <strong>con tu numero de orden de compra</strong></div>
                     </div>
-                    <button>Agregar al carrito</button>
-                </article>
-            </section>
-        </div>
+                </div>
+            </div>
+        </section>
         <!-- Aca termina el main-->
     </main>
     <footer class="site-footer">
