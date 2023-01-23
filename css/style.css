@@ -175,13 +175,10 @@ h4{
         justify-content: center;
         align-items: center;
     }
-    .footer-links{
-        
-    }
 }
 .main-preguntas {
     background: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
     opacity: .8;
     background-repeat: no-repeat;
-    background-size: fit;
+    
 }
