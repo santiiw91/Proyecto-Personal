@@ -197,6 +197,9 @@ h4{
     .card {
         height:auto !important;
     }
+    .w-75 {
+        width: 90% !important;
+    }
 }
 .main-preguntas {
     background: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
@@ -205,4 +208,9 @@ h4{
 }
 .card {
     height: 42rem;
+}
+@media (min-width: 768px) {
+    .p-md-5 {
+        padding: 0 !important;
+    }
 }
