@@ -26,7 +26,6 @@ gap: 2rem;
 /*El main del index */
 .main_box {
     text-align: center;
-    padding-top: 3rem
 }
 
 .card-body {
@@ -39,11 +38,21 @@ gap: 2rem;
 footer {
     background-color: rgb(59, 59, 59);
     height: 100%;
-    margin-top: 2rem;
     width: 100%;
-    
+
     text-align: center;
 }
+ .footer-links-social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+ }
+ .footer-links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
 
 
 
@@ -97,8 +106,12 @@ background-color: white;
   text-decoration:none;
 }
 
-.footer-links {
-    margin-left: 10px;
+
+.elementfooter ul {
+    padding-left: 0;
+}
+.fab {
+    font-size: 30px !important;
 }
 
 .copyright-text
@@ -118,10 +131,9 @@ bottom:30px}
     height: 80px;
     padding: 1rem;
 }
-.elementfooter {
+.site-footer .container-fluid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 2rem;    
+    grid-template-columns: repeat(3, 1fr) !important; 
 }
 
 
@@ -157,10 +169,10 @@ h4{
 .main_container_register {
     background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
     background-size: cover;
-    height: 900px;
+    height: 1100px;
 }
 
-@media (max-width: 541px) {
+@media (max-width: 576px) {
     .main_box{
         display: flex;
         justify-content: center;
@@ -172,13 +184,18 @@ h4{
     .elementfooter {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        margin-bottom: 0;
         align-items: center;
     }
-}
+    .col {
+        display: flex;
+        justify-content: center;
+    }
+    .iconbox img{
+        height: 60px;
+}}
 .main-preguntas {
     background: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
     opacity: .8;
     background-repeat: no-repeat;
-    
 }
