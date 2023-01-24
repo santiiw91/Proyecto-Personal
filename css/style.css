@@ -193,9 +193,16 @@ h4{
     }
     .iconbox img{
         height: 60px;
-}}
+    }
+    .card {
+        height:auto !important;
+    }
+}
 .main-preguntas {
     background: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
     opacity: .8;
     background-repeat: no-repeat;
+}
+.card {
+    height: 42rem;
 }
