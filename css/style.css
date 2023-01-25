@@ -14,7 +14,7 @@ body {
 .navbar-nav {
   gap: 2rem;
 }
-.nav-item {
+.nav-item:not(2){
   transition: transform 0.3s ease-in-out;
 }
 .nav-item:hover {
