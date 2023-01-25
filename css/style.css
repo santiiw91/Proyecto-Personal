@@ -173,6 +173,10 @@ h4 {
 .row-contacto iframe {
   width: 100%;
 }
+#fcf-form {
+    width: 100%;
+  }
+
 
 @media (max-width: 576px) {
   .main_box {
@@ -221,7 +225,5 @@ h4 {
   .p-md-5 {
     padding: 0 !important;
   }
-  #fcf-form {
-    width: 100%;
-  }
+  
 }
