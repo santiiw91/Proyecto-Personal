@@ -171,6 +171,29 @@ h4{
     background-size: cover;
     height: 1100px;
 }
+.main-contacto {
+    background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
+    background-size: cover;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.row-contacto {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(197, 192, 192, 0.623);
+    border-radius: 25px;
+    width: 50%;
+    gap: 20px;
+}
+.row-contacto iframe {
+    width: 100%;
+}
+
 
 @media (max-width: 576px) {
     .main_box{
