@@ -1,71 +1,84 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto:wght@300;400;700&display=swap");
-
 /*Comenzamos con buenas practicas😄*/
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: "Poor Story", cursive;
   font-family: "Roboto", sans-serif;
 }
 
-.navbar-nav {
+header .navbar .navbar-nav {
   gap: 2rem;
 }
-.nav-item:not(2){
-  transition: transform 0.3s ease-in-out;
-}
-.nav-item:hover {
-  transform: scale(1.2);
-}
-/*Termina el menu de navageacion */
-
-/*El main del index */
-.main_box {
-  text-align: center;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-footer {
-  background-color: rgb(59, 59, 59);
-  height: 100%;
-  width: 100%;
-
-  text-align: center;
-}
-.footer-links-social-media {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-li {
+header .navbar .navbar-nav li {
   color: rgb(236, 236, 236);
   list-style: none;
   text-decoration: none;
   font: bolder;
   text-align: start;
 }
-a {
+header .navbar .nav-item:nth-child(2) {
+  transition: transform 0.3s ease-in-out;
+}
+header .navbar .nav-item:hover {
+  transform: scale(1.2);
+}
+
+.main_box {
+  text-align: center;
+}
+.main_box .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+footer {
+  background-color: rgb(59, 59, 59);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 1rem;
+  color: rgb(194, 193, 193);
+}
+footer .site-footer {
+  background-color: #26272b;
+  font-size: 15px;
+  line-height: 24px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+footer .site-footer .elementfooter1 h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+footer .site-footer .elementfooter1 .iconbox img {
+  height: 80px;
+  padding: 1rem;
+}
+footer .site-footer .elementfooter2 ul .footer-links {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  list-style: none;
+}
+footer .site-footer .elementfooter2 ul .footer-links a {
+  color: #737373;
+}
+footer .site-footer .elementfooter2 ul .footer-links a .fab {
+  font-size: 30px !important;
+}
+footer .site-footer .elementfooter2 ul .footer-links a:hover {
+  color: #3366cc;
   text-decoration: none;
 }
 
-.footer_nav_links:hover {
-  color: black;
-  background-color: white;
-}
-
+/*Termina el menu de navageacion */
 .cardlogo {
   height: 30px;
   border-style: solid;
@@ -73,54 +86,21 @@ a {
   background-color: white;
 }
 
-.site-footer {
-  background-color: #26272b;
-  font-size: 15px;
-  line-height: 24px;
-  color: #737373;
-  height: auto;
-}
-
-.site-footer h6 {
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-top: 5px;
-  letter-spacing: 2px;
-}
-.site-footer a {
-  color: #737373;
-}
-.site-footer a:hover {
-  color: #3366cc;
-  text-decoration: none;
-}
-
-.elementfooter ul {
-  padding-left: 0;
-}
-.fab {
-  font-size: 30px !important;
-}
-
 .copyright-text {
   bottom: 30px;
 }
 
-.social-icons {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-.social-icons li {
-  display: inline-block;
-  margin-bottom: 4px;
-}
 .iconbox img {
   height: 80px;
   padding: 1rem;
 }
-.site-footer .container-fluid {
+
+.site-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.container-fluid {
   display: grid;
   grid-template-columns: repeat(3, 1fr) !important;
 }
@@ -135,6 +115,7 @@ a {
   background: #445170;
   border-radius: 6px;
 }
+
 .controls {
   height: 2.5rem;
   width: 100%;
@@ -146,6 +127,7 @@ a {
   text-align: start;
   position: relative;
 }
+
 h4 {
   font-size: 22px;
   margin-bottom: 10px;
@@ -157,6 +139,7 @@ h4 {
   background-size: cover;
   height: 1100px;
 }
+
 .main-contacto {
   background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
   background-size: cover;
@@ -165,13 +148,15 @@ h4 {
   align-items: center;
   justify-content: center;
 }
+
 .main-chaquetas {
-    background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
-    background-size: cover;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;}
+  background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
+  background-size: cover;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .row-contacto {
   padding: 2rem;
@@ -183,6 +168,7 @@ h4 {
   width: 50%;
   gap: 20px;
 }
+
 .row-contacto iframe {
   width: 100%;
 }
@@ -201,16 +187,8 @@ h4 {
     margin-bottom: 0;
     align-items: center;
   }
-  .col {
-    display: flex;
-    justify-content: center;
-  }
   .iconbox img {
     height: 60px;
-  }
-  .card {
-    height: auto !important;
-   
   }
   .w-75 {
     width: 90% !important;
@@ -228,9 +206,11 @@ h4 {
   opacity: 0.8;
   background-repeat: no-repeat;
 }
+
 .card {
   height: 42rem;
 }
+
 @media (min-width: 768px) {
   .p-md-5 {
     padding: 0 !important;
@@ -240,18 +220,20 @@ h4 {
   }
 }
 .container-chaquetas {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  height: auto;
+}
 
-}
 .container-chaquetas h1 {
-    text-align: center;
-    background: rgba(202, 202, 202, 0.404);
-    color: rgb(253, 250, 250);
-    border: solid 0.5px;
-    border-radius: 30px;
-    margin: auto;
-    padding: 5px 15px;
+  text-align: center;
+  background: rgba(202, 202, 202, 0.404);
+  color: rgb(253, 250, 250);
+  border: solid 0.5px;
+  border-radius: 30px;
+  margin: auto;
+  padding: 5px 15px;
 }
+
+/*# sourceMappingURL=style.css.map */
