@@ -1,5 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto:wght@300;400;700&display=swap");
+:root {
+  --link-size: 45px;
+  --trans-property: all 0.3s ease;
+}
+
 /*Comenzamos con buenas practicas😄*/
 * {
   margin: 0;
@@ -17,15 +22,16 @@ header .navbar .navbar-nav li {
   font: bolder;
   text-align: start;
 }
-header .navbar .nav-item:nth-child(2) {
+header .navbar .navbar-nav .nav-item:nth-child(2) {
   transition: transform 0.3s ease-in-out;
 }
-header .navbar .nav-item:hover {
+header .navbar .navbar-nav .nav-item:hover {
   transform: scale(1.2);
 }
 
 .main_box {
   text-align: center;
+  z-index: -2;
 }
 .main_box .card-body {
   display: flex;
@@ -34,48 +40,117 @@ header .navbar .nav-item:hover {
 }
 
 footer {
-  background-color: rgb(59, 59, 59);
   height: 100%;
   width: 100%;
   text-align: center;
   padding-top: 1rem;
   color: rgb(194, 193, 193);
-}
-footer .site-footer {
   background-color: #26272b;
   font-size: 15px;
   line-height: 24px;
-  height: auto;
   display: flex;
   flex-direction: column;
 }
-footer .site-footer .elementfooter1 h6 {
+footer .elementfooter-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+footer .elementfooter-box .elementfooter1 h6 {
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
   margin-top: 5px;
   letter-spacing: 2px;
 }
-footer .site-footer .elementfooter1 .iconbox img {
+footer .elementfooter-box .elementfooter1 .iconbox img {
   height: 80px;
   padding: 1rem;
 }
-footer .site-footer .elementfooter2 ul .footer-links {
+footer .elementfooter-box .elementfooter2 h6 {
+  text-align: center;
+}
+footer .elementfooter-box .elementfooter2 .footer-links {
   display: flex;
   align-items: center;
   flex-direction: column;
-  text-decoration: none;
-  list-style: none;
+  gap: 15px;
 }
-footer .site-footer .elementfooter2 ul .footer-links a {
+footer .elementfooter-box .elementfooter2 .footer-links li a {
+  list-style: none;
+  text-decoration: none !important;
   color: #737373;
 }
-footer .site-footer .elementfooter2 ul .footer-links a .fab {
-  font-size: 30px !important;
+footer .elementfooter-box .elementfooter2 .footer-links li a:hover {
+  color: #fafafa;
+  transform: scale(1.2);
 }
-footer .site-footer .elementfooter2 ul .footer-links a:hover {
-  color: #3366cc;
+footer .elementfooter-box .elementfooter3 h6 {
+  text-align: center;
+}
+footer .elementfooter-box .elementfooter3 .footer-links {
+  list-style: none;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .elementfooter-box .elementfooter3 .footer-links .social-icon {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: var(--link-size);
+  height: var(--link-size);
+  margin: 8px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  transition: var(--trans-property);
+}
+footer .elementfooter-box .elementfooter3 .footer-links .social-icon i {
+  margin: auto;
+  font-size: 24px;
+  color: #67798e;
+  z-index: 1;
+  transition: var(--trans-property);
+}
+footer .elementfooter-box .elementfooter3 .footer-links .social-icon:after {
+  content: "";
+  width: var(--link-size);
+  height: var(--link-size);
+  position: absolute;
+  transform: translate(0, var(--link-size));
+  border-radius: 50%;
+  transition: var(--trans-property);
+}
+footer .elementfooter-box .elementfooter3 .footer-links .social-icon.twitter:hover {
+  color: white;
+  background-color: #1da1f2;
+  transition: all 0.2s linear;
+}
+footer .elementfooter-box .elementfooter3 .footer-links .social-icon.instagram:hover {
+  transition: all 0.2s linear;
+  color: white;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+footer .elementfooter-box .elementfooter3 .footer-links .social-icon.facebook:hover {
+  transition: all 0.2s linear;
+  background-color: #1769ff;
+  color: white;
+}
+footer .elementfooter-box .elementfooter3 .footer-links .fab {
+  font-size: 35px;
+  transition: all 0.5s linear;
+}
+footer .elementfooter-box .elementfooter3 .footer-links .fab:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+ul {
+  padding-left: 0;
 }
 
 /*Termina el menu de navageacion */
@@ -88,21 +163,6 @@ footer .site-footer .elementfooter2 ul .footer-links a:hover {
 
 .copyright-text {
   bottom: 30px;
-}
-
-.iconbox img {
-  height: 80px;
-  padding: 1rem;
-}
-
-.site-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) !important;
-}
-
-.container-fluid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) !important;
 }
 
 /* REGISTRO.HTML*/
@@ -234,6 +294,17 @@ h4 {
   border-radius: 30px;
   margin: auto;
   padding: 5px 15px;
+}
+
+.dropdown {
+  z-index: 5;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  font-style: bolder;
+  text-align: start;
 }
 
 /*# sourceMappingURL=style.css.map */
