@@ -32,9 +32,6 @@ header .navbar .navbar-nav .nav-item:nth-child(2) {
 header .navbar .navbar-nav .nav-item:hover {
   transform: scale(1.2);
 }
-header .navbar .navbar-nav .nav-item .dropdown {
-  z-index: 5;
-}
 
 .main_box {
   text-align: center;
@@ -328,6 +325,10 @@ li {
   text-decoration: none;
   font-style: bolder;
   text-align: start;
+}
+
+.dropdown {
+  z-index: 5;
 }
 
 /*# sourceMappingURL=style.css.map */

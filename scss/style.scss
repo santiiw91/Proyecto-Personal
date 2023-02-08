@@ -31,9 +31,7 @@ header{
                 &:hover {
                 transform: scale(1.2);
                 }
-                .dropdown{
-                    z-index: 5;
-                }
+                
         }
         }
     }
@@ -340,4 +338,7 @@ li {
     text-decoration: none;
     font-style: bolder;
     text-align: start;
+}
+.dropdown{
+    z-index: 5;
 }
