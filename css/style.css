@@ -41,9 +41,13 @@ header .navbar .navbar-nav .nav-item:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.main_box .card-container .col {
+  display: flex;
+  justify-content: center;
   /*Damos estilos al interior de las card*/
 }
-.main_box .card-container .card-body {
+.main_box .card-container .col .card-body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -239,6 +243,20 @@ h4 {
   height: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.main-chaquetas .col, .main-accesorios .col, .main-delantales .col {
+  display: flex;
+  justify-content: center;
+}
+
+.main-delantales .col {
+  display: flex;
+  justify-content: center;
+}
+
+.main-accesorios .col {
+  display: flex;
   justify-content: center;
 }
 

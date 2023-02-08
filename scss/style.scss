@@ -44,14 +44,17 @@ header{
             
             @include flex-row;
             flex-wrap: wrap;
-            
+            .col {
+                display: flex;
+                justify-content: center;
         /*Damos estilos al interior de las card*/
-        .card-body {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+                .card-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                }
+            }
         }
-    }
     }
     /*Comienzan los estilos del footer*/
 footer{
@@ -251,14 +254,27 @@ h4 {
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+    .col {
+        display: flex;
+        justify-content: center;
+    }
+}
     
 .main-delantales{
     @extend .main-chaquetas;
+    .col {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .main-accesorios{
     @extend .main-chaquetas;
+    .col {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .row-contacto {
@@ -286,6 +302,7 @@ h4 {
     margin-bottom: 0;
     
     } 
+    
     .iconbox img {
     height: 60px;
     }
