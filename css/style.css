@@ -20,7 +20,7 @@ header .navbar .navbar-nav {
   gap: 2rem;
 }
 header .navbar .navbar-nav li {
-  color: rgb(236, 236, 236);
+  color: #fafafa;
   list-style: none;
   text-decoration: none;
   font: bolder;
@@ -32,13 +32,21 @@ header .navbar .navbar-nav .nav-item:nth-child(2) {
 header .navbar .navbar-nav .nav-item:hover {
   transform: scale(1.2);
 }
+header .navbar .navbar-nav .nav-item .dropdown {
+  z-index: 5;
+}
 
 .main_box {
   text-align: center;
   z-index: -2;
+}
+.main_box .card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   /*Damos estilos al interior de las card*/
 }
-.main_box .card-body {
+.main_box .card-container .card-body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -50,7 +58,7 @@ footer {
   width: 100%;
   text-align: center;
   padding-top: 1rem;
-  color: rgb(194, 193, 193);
+  color: #fafafa;
   background-color: #26272b;
   font-size: 15px;
   line-height: 24px;
@@ -66,7 +74,7 @@ footer .elementfooter-box {
   /*Damos estilos a los iconos de redes sociales*/
 }
 footer .elementfooter-box .elementfooter1 h6 {
-  color: #fff;
+  color: #fafafa;
   font-size: 16px;
   text-transform: uppercase;
   margin-top: 5px;
@@ -81,8 +89,8 @@ footer .elementfooter-box .elementfooter2 h6 {
 }
 footer .elementfooter-box .elementfooter2 .footer-links {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   gap: 15px;
 }
 footer .elementfooter-box .elementfooter2 .footer-links li a {
@@ -101,8 +109,8 @@ footer .elementfooter-box .elementfooter3 .footer-links {
   list-style: none;
   text-decoration: none;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 footer .elementfooter-box .elementfooter3 .footer-links .social-icon {
@@ -169,6 +177,11 @@ ul {
   flex-direction: column;
   justify-content: flex-end;
 }
+@media (max-width: 568px) {
+  .card-body {
+    justify-content: center;
+  }
+}
 
 .copyright-text {
   bottom: 30px;
@@ -208,6 +221,11 @@ h4 {
   background-size: cover;
   height: 1100px;
 }
+@media (max-width: 992px) {
+  .main_container_register .card-registro {
+    height: auto !important;
+  }
+}
 
 .main-contacto {
   background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
@@ -218,7 +236,7 @@ h4 {
   justify-content: center;
 }
 
-.main-chaquetas, .main-delantales, .main-accesorios {
+.main-chaquetas, .main-accesorios, .main-delantales {
   background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
   background-size: cover;
   height: auto;
@@ -237,7 +255,6 @@ h4 {
   width: 50%;
   gap: 20px;
 }
-
 .row-contacto iframe {
   width: 100%;
 }
@@ -253,8 +270,8 @@ h4 {
   .elementfooter {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
     align-items: center;
+    margin-bottom: 0;
   }
   .iconbox img {
     height: 60px;
@@ -291,8 +308,8 @@ h4 {
 .container-chaquetas {
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
   align-items: center;
+  padding-top: 2rem;
   flex-wrap: wrap;
   height: auto;
 }
@@ -304,10 +321,6 @@ h4 {
   border-radius: 30px;
   margin: auto;
   padding: 5px 15px;
-}
-
-.dropdown {
-  z-index: 5;
 }
 
 li {
