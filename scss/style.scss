@@ -3,7 +3,7 @@
 
 :root {
     --link-size: 45px; 
-    --trans-property: all 0.3s ease;
+    
 }
 /*Comenzamos con buenas practicas😄*/
 * {
@@ -21,7 +21,13 @@ header{
                 list-style: none;
                 text-decoration: none;
                 font: bolder;
-                text-align: start;             
+                text-align: start;
+                a{
+                    transition: all 0.3s ;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }            
             }
             gap: 2rem;
             .nav-item{
@@ -29,10 +35,10 @@ header{
                 transition: transform 0.3s ease-in-out;
                 }
                 &:hover {
-                transform: scale(1.2);
+                transform: scale(1.1);
                 }
                 
-        }
+            }
         }
     }
     }   
@@ -359,3 +365,4 @@ li {
 .dropdown{
     z-index: 5;
 }
+

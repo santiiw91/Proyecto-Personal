@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto:wght@300;400;700&display=swap");
 :root {
   --link-size: 45px;
-  --trans-property: all 0.3s ease;
 }
 
 /*Comenzamos con buenas practicas😄*/
@@ -26,11 +25,17 @@ header .navbar .navbar-nav li {
   font: bolder;
   text-align: start;
 }
+header .navbar .navbar-nav li a {
+  transition: all 0.3s;
+}
+header .navbar .navbar-nav li a:hover {
+  transform: scale(1.1);
+}
 header .navbar .navbar-nav .nav-item:nth-child(2) {
   transition: transform 0.3s ease-in-out;
 }
 header .navbar .navbar-nav .nav-item:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .main_box {
