@@ -225,42 +225,6 @@ ul {
     justify-content: center;
   }
 }
-.card-body .btn-dark {
-  text-decoration: none !important;
-  color: inherit;
-  position: relative;
-  padding-bottom: 10px;
-  height: 2rem;
-  display: center;
-  justify-content: center;
-  align-items: center;
-  background: #fafafa;
-  cursor: pointer;
-}
-.card-body .btn-dark:before {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  transform-origin: left top right;
-  transform: scaleY(0);
-  transition: 0.4s ease-out;
-}
-.card-body .btn-dark:hover h6 {
-  color: #fafafa;
-}
-.card-body .btn-dark:hover:before {
-  transform: scaleY(1);
-}
-.card-body .btn-dark .text-comprar {
-  position: relative;
-  font-size: 1rem;
-  transition: 0.4s ease-out;
-}
 
 .copyright-text {
   bottom: 30px;
@@ -326,6 +290,42 @@ h4 {
 .main-chaquetas .col, .main-accesorios .col, .main-delantales .col {
   display: flex;
   justify-content: center;
+}
+.main-chaquetas .col .btn-dark, .main-accesorios .col .btn-dark, .main-delantales .col .btn-dark {
+  text-decoration: none !important;
+  color: inherit;
+  position: relative;
+  padding-bottom: 10px;
+  height: 2rem;
+  display: center;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  cursor: pointer;
+}
+.main-chaquetas .col .btn-dark:before, .main-accesorios .col .btn-dark:before, .main-delantales .col .btn-dark:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transform-origin: left top right;
+  transform: scaleY(0);
+  transition: 0.4s ease-out;
+}
+.main-chaquetas .col .btn-dark:hover h6, .main-accesorios .col .btn-dark:hover h6, .main-delantales .col .btn-dark:hover h6 {
+  color: #fafafa;
+}
+.main-chaquetas .col .btn-dark:hover:before, .main-accesorios .col .btn-dark:hover:before, .main-delantales .col .btn-dark:hover:before {
+  transform: scaleY(1);
+}
+.main-chaquetas .col .btn-dark .text-comprar, .main-accesorios .col .btn-dark .text-comprar, .main-delantales .col .btn-dark .text-comprar {
+  position: relative;
+  font-size: 1rem;
+  transition: 0.4s ease-out;
 }
 
 .main-delantales .col {
