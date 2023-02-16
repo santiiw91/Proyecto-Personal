@@ -27,3 +27,8 @@ $color-facebook: #1769ff;
     display: flex;
     flex-direction: column;
 }
+@mixin flex-center {
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
