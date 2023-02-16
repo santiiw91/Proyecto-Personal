@@ -350,6 +350,45 @@ h4 {
     .col {
         display: flex;
         justify-content: center;
+        .btn-dark {
+                    
+            text-decoration: none !important;
+            color: inherit;
+            position: relative;
+            padding-bottom: 10px;
+            
+            height: 2rem;
+            @include flex-center;
+            background: $color-primario;
+            cursor: pointer;
+            &:before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                transform-origin: left top right ;
+                transform: scaleY(0);
+                transition: .4s ease-out;                   
+                }
+                &:hover{
+                h6{
+                    color: $color-primario ;         
+                }
+                &:before{
+                    transform: scaleY(1);
+                }
+            }
+            .text-comprar{
+                position: relative;
+                font-size: 1rem;
+                
+                transition: .4s ease-out;
+            }
+        }
     }
 }
 
@@ -358,6 +397,45 @@ h4 {
     .col {
         display: flex;
         justify-content: center;
+        .btn-dark {
+                    
+            text-decoration: none !important;
+            color: inherit;
+            position: relative;
+            padding-bottom: 10px;
+            
+            height: 2rem;
+            @include flex-center;
+            background: $color-primario;
+            cursor: pointer;
+            &:before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                transform-origin: left top right ;
+                transform: scaleY(0);
+                transition: .4s ease-out;                   
+                }
+                &:hover{
+                h6{
+                    color: $color-primario ;         
+                }
+                &:before{
+                    transform: scaleY(1);
+                }
+            }
+            .text-comprar{
+                position: relative;
+                font-size: 1rem;
+                
+                transition: .4s ease-out;
+            }
+        }
     }
 }
 
