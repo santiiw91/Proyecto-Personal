@@ -27,16 +27,15 @@ header .navbar .navbar-nav li {
   text-align: start;
 }
 header .navbar .navbar-nav li .nav-link {
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
-header .navbar .navbar-nav li .nav-link:hover {
-  transform: scale(1.1);
+@media (min-width: 835px) {
+  header .navbar .navbar-nav li .nav-link:hover {
+    transform: scale(1.1);
+  }
 }
 header .navbar .navbar-nav .nav-item:nth-child(2) {
   transition: transform 0.3s ease-in-out;
-}
-header .navbar .navbar-nav .nav-item:hover {
-  transform: scale(1.1);
 }
 
 .main_box {

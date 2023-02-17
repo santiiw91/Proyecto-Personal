@@ -2,19 +2,23 @@
 @import "variables";
 
 :root {
-    --link-size: 45px; 
+    --link-size: 45px;
     --trans-property: all 0.3s ease-in-out;
 }
+
 /*Comenzamos con buenas practicas😄*/
 * {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
 }
+
 /*Header e index*/
-header{
+header {
+
     /*Damos estilos al nav bar*/
-    .navbar{
+    .navbar {
+        
         .navbar-nav {
             li {
                 color: $color-primario ;
@@ -22,169 +26,192 @@ header{
                 text-decoration: none;
                 font: bolder;
                 text-align: start;
-                .nav-link{
-                    transition: all 0.3s ;
-                    &:hover {
-                        transform: scale(1.1);
+
+                .nav-link {
+                    transition: all 0.3s ease-in-out;
+
+                    @media (min-width:835px) {
+                        &:hover {
+                            transform: scale(1.1);
+                        }
                     }
-                }            
+                }
             }
+
             gap: 2rem;
-            .nav-item{
-                &:nth-child(2){
-                transition: transform 0.3s ease-in-out;
+
+            .nav-item {
+                &:nth-child(2) {
+                    transition: transform 0.3s ease-in-out;
                 }
-                &:hover {
-                transform: scale(1.1);
-                }
-                
             }
         }
     }
-    }   
-    .main_box {
-        
-        text-align: center;
-        z-index: -2;
-        .card-container{
-            
-            @include flex-row;
-            flex-wrap: wrap;
-            .col {
-                display: flex;
-                justify-content: center;
-        /*Damos estilos al interior de las card*/
-                .card-body {
+}
+
+.main_box {
+
+    text-align: center;
+    z-index: -2;
+
+    .card-container {
+
+        @include flex-row;
+        flex-wrap: wrap;
+
+        .col {
+            display: flex;
+            justify-content: center;
+
+            /*Damos estilos al interior de las card*/
+            .card-body {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                    .btn-dark {
-                    
-                        text-decoration: none !important;
-                        color: inherit;
-                        position: relative;
-                        padding-bottom: 10px;
-                        
-                        height: 2rem;
-                        @include flex-center;
-                        background: $color-primario;
-                        cursor: pointer;
+
+                .btn-dark {
+
+                    text-decoration: none !important;
+                    color: inherit;
+                    position: relative;
+                    padding-bottom: 10px;
+
+                    height: 2rem;
+                    @include flex-center;
+                    background: $color-primario;
+                    cursor: pointer;
+
+                    &:before {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #000;
+                        transform-origin: left top right;
+                        transform: scaleY(0);
+                        transition: .4s ease-out;
+                    }
+
+                    &:hover {
+                        h6 {
+                            color: $color-primario ;
+                        }
+
                         &:before {
-                            position: absolute;
-                            left: 0;
-                            bottom: 0;
-                            content: "";
-                            display: block;
-                            width: 100%;
-                            height: 100%;
-                            background-color: #000;
-                            transform-origin: left top right ;
-                            transform: scaleY(0);
-                            transition: .4s ease-out;                   
-                            }
-                            &:hover{
-                            h6{
-                                color: $color-primario ;         
-                            }
-                            &:before{
-                                transform: scaleY(1);
-                            }
+                            transform: scaleY(1);
                         }
-                        .text-comprar{
-                            position: relative;
-                            font-size: 1rem;
-                            
-                            transition: .4s ease-out;
-                        }
+                    }
+
+                    .text-comprar {
+                        position: relative;
+                        font-size: 1rem;
+
+                        transition: .4s ease-out;
                     }
                 }
             }
         }
     }
-    /*Comienzan los estilos del footer*/
-footer{
-    
+}
+
+/*Comienzan los estilos del footer*/
+footer {
+
     height: 100%;
-    width: 100%;    
+    width: 100%;
     text-align: center;
     padding-top: 1rem;
-    color: $color-primario;        
+    color: $color-primario;
     background-color: $color-footer;
     font-size: 15px;
-    line-height: 24px;       
-    @include flex-column;  
+    line-height: 24px;
+    @include flex-column;
+
     /*le damos estilo de grid al footer para las 3 secciones*/
     .elementfooter-box {
         display: grid;
-        grid-template-columns: repeat(3, 1fr) !important;     
+        grid-template-columns: repeat(3, 1fr) !important;
+
         /*Damos estilos a los medios de pago*/
-        .elementfooter1{   
+        .elementfooter1 {
             h6 {
-            color: $color-primario;
-            font-size: 16px;
-            text-transform: uppercase;
-            margin-top: 5px;
-            letter-spacing: 2px;
-            }              
+                color: $color-primario;
+                font-size: 16px;
+                text-transform: uppercase;
+                margin-top: 5px;
+                letter-spacing: 2px;
+            }
+
             .iconbox {
-                img{
-                    
-                height: 80px;
-                padding: 1rem;
+                img {
+
+                    height: 80px;
+                    padding: 1rem;
                 }
             }
         }
-        /*Damos estilos a los links de navegacion*/    
-        .elementfooter2{
-            h6{
-            text-align: center;
-            }                                     
+
+        /*Damos estilos a los links de navegacion*/
+        .elementfooter2 {
+            h6 {
+                text-align: center;
+            }
+
             .footer-links {
-            @include flex-column-align-centered;
-            gap: 15px;                                    
-                li{                                                          
+                @include flex-column-align-centered;
+                gap: 15px;
+
+                li {
                     a {
-                        list-style: none;   
-                    text-decoration: none !important; 
-                    color: #737373;                      
+                        list-style: none;
+                        text-decoration: none !important;
+                        color: #737373;
+
                         &:hover {
-                        color: $color-primario;
-                        transform: scale(1.2)
-                        }   
-                    }  
-                }            
-            }                                        
+                            color: $color-primario;
+                            transform: scale(1.2)
+                        }
+                    }
+                }
+            }
         }
+
         /*Damos estilos a los iconos de redes sociales*/
         .elementfooter3 {
-            h6{
+            h6 {
                 text-align: center;
-            }                                     
+            }
+
             .footer-links {
                 list-style: none;
                 text-decoration: none;
                 @include flex-column-align-centered;
-                gap: 10px;  
+                gap: 10px;
+
                 .social-icon {
                     display: flex;
                     position: relative;
-                    overflow: hidden; 
+                    overflow: hidden;
                     width: var(--link-size);
                     height: var(--link-size);
                     margin: 8px;
                     background-color: white;
                     border-radius: 50%;
-                    box-shadow: 0px 1px 3px rgba(0,0,0,0.12);
+                    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
                     text-decoration: none;
                     transition: var(--trans-property);
-                    
+
                     i {
-                    margin: auto;
-                    font-size: 24px;
-                    color: #67798e;
-                    z-index: 1; 
-                    transition: var(--trans-property);
+                        margin: auto;
+                        font-size: 24px;
+                        color: #67798e;
+                        z-index: 1;
+                        transition: var(--trans-property);
                     }
+
                     &:after {
                         content: "";
                         width: var(--link-size);
@@ -193,37 +220,41 @@ footer{
                         transform: translate(0, var(--link-size));
                         border-radius: 50%;
                         transition: var(--trans-property);
-                        }                  
+                    }
                 }
-                
+
                 .social-icon.twitter:hover {
                     color: white;
                     background-color: $color-twitter;
                     transition: all 0.2s linear;
                 }
+
                 .social-icon.instagram:hover {
                     transition: all 0.2s linear;
                     color: white;
                     background: $color-instagram;
-                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
                 }
+
                 .social-icon.facebook:hover {
                     transition: all 0.2s linear;
-                background-color: $color-facebook;
-                color: white;
+                    background-color: $color-facebook;
+                    color: white;
                 }
-                .fab{
+
+                .fab {
                     font-size: 35px;
                     transition: all 0.5s linear;
-                    &:hover{
+
+                    &:hover {
                         color: white;
                         transform: scale(1.2);
-                        }
                     }
                 }
-            }                        
+            }
         }
     }
+}
 
 ul {
     padding-left: 0;
@@ -237,54 +268,59 @@ ul {
 .card-body {
     @include flex-column;
     justify-content: flex-end;
+
     @media (max-width: 568px) {
         justify-content: center;
-        
+
     }
 }
 
 
 .copyright-text {
-  bottom: 30px;
+    bottom: 30px;
 }
 
 /* REGISTRO.HTML*/
 .form-register {
-  @include flex-column;
-  gap: 1rem;
-  border: 1px solid #6f6f70;
-  padding: 12px;
-  background: #445170;
-  border-radius: 6px;
+    @include flex-column;
+    gap: 1rem;
+    border: 1px solid #6f6f70;
+    padding: 12px;
+    background: #445170;
+    border-radius: 6px;
 }
+
 .controls {
-  height: 2.5rem;
-  width: 100%;
-  color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 18px;
-  border-radius: 15px;
-  padding-left: 12px;
-  text-align: start;
-  position: relative;
+    height: 2.5rem;
+    width: 100%;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 18px;
+    border-radius: 15px;
+    padding-left: 12px;
+    text-align: start;
+    position: relative;
 }
+
 h4 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: white;
 }
 
 .main_container_register {
     background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
     background-size: cover;
     height: 1100px;
+
     .card-registro {
         @media (max-width: 992px) {
             height: auto !important;
-            
+
         }
     }
 }
+
 .main-contacto {
     background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
     background-size: cover;
@@ -293,6 +329,7 @@ h4 {
     align-items: center;
     justify-content: center;
 }
+
 .main-chaquetas {
     background-image: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
     background-size: cover;
@@ -300,20 +337,23 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+
     .col {
         display: flex;
         justify-content: center;
+
         .btn-dark {
-                    
+
             text-decoration: none !important;
             color: inherit;
             position: relative;
             padding-bottom: 10px;
-            
+
             height: 2rem;
             @include flex-center;
             background: $color-primario;
             cursor: pointer;
+
             &:before {
                 position: absolute;
                 left: 0;
@@ -323,91 +363,50 @@ h4 {
                 width: 100%;
                 height: 100%;
                 background-color: #000;
-                transform-origin: left top right ;
+                transform-origin: left top right;
                 transform: scaleY(0);
-                transition: .4s ease-out;                   
-                }
-                &:hover{
-                h6{
-                    color: $color-primario ;         
-                }
-                &:before{
-                    transform: scaleY(1);
-                }
-            }
-            .text-comprar{
-                position: relative;
-                font-size: 1rem;
-                
                 transition: .4s ease-out;
             }
-        }
-    }
-}
-    
-.main-delantales{
-    @extend .main-chaquetas;
-    .col {
-        display: flex;
-        justify-content: center;
-        .btn-dark {
-                    
-            text-decoration: none !important;
-            color: inherit;
-            position: relative;
-            padding-bottom: 10px;
-            
-            height: 2rem;
-            @include flex-center;
-            background: $color-primario;
-            cursor: pointer;
-            &:before {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                content: "";
-                display: block;
-                width: 100%;
-                height: 100%;
-                background-color: #000;
-                transform-origin: left top right ;
-                transform: scaleY(0);
-                transition: .4s ease-out;                   
+
+            &:hover {
+                h6 {
+                    color: $color-primario ;
                 }
-                &:hover{
-                h6{
-                    color: $color-primario ;         
-                }
-                &:before{
+
+                &:before {
                     transform: scaleY(1);
                 }
             }
-            .text-comprar{
+
+            .text-comprar {
                 position: relative;
                 font-size: 1rem;
-                
+
                 transition: .4s ease-out;
             }
         }
     }
 }
 
-.main-accesorios{
+.main-delantales {
     @extend .main-chaquetas;
+
     .col {
         display: flex;
         justify-content: center;
+
         .btn-dark {
-                    
+
             text-decoration: none !important;
             color: inherit;
             position: relative;
             padding-bottom: 10px;
-            
+
             height: 2rem;
             @include flex-center;
             background: $color-primario;
             cursor: pointer;
+
             &:before {
                 position: absolute;
                 left: 0;
@@ -417,22 +416,78 @@ h4 {
                 width: 100%;
                 height: 100%;
                 background-color: #000;
-                transform-origin: left top right ;
+                transform-origin: left top right;
                 transform: scaleY(0);
-                transition: .4s ease-out;                   
+                transition: .4s ease-out;
+            }
+
+            &:hover {
+                h6 {
+                    color: $color-primario ;
                 }
-                &:hover{
-                h6{
-                    color: $color-primario ;         
-                }
-                &:before{
+
+                &:before {
                     transform: scaleY(1);
                 }
             }
-            .text-comprar{
+
+            .text-comprar {
                 position: relative;
                 font-size: 1rem;
-                
+
+                transition: .4s ease-out;
+            }
+        }
+    }
+}
+
+.main-accesorios {
+    @extend .main-chaquetas;
+
+    .col {
+        display: flex;
+        justify-content: center;
+
+        .btn-dark {
+
+            text-decoration: none !important;
+            color: inherit;
+            position: relative;
+            padding-bottom: 10px;
+
+            height: 2rem;
+            @include flex-center;
+            background: $color-primario;
+            cursor: pointer;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                transform-origin: left top right;
+                transform: scaleY(0);
+                transition: .4s ease-out;
+            }
+
+            &:hover {
+                h6 {
+                    color: $color-primario ;
+                }
+
+                &:before {
+                    transform: scaleY(1);
+                }
+            }
+
+            .text-comprar {
+                position: relative;
+                font-size: 1rem;
+
                 transition: .4s ease-out;
             }
         }
@@ -447,54 +502,64 @@ h4 {
     border-radius: 25px;
     width: 50%;
     gap: 20px;
+
     iframe {
-        width: 100%; 
-    }  
+        width: 100%;
+    }
 }
 
 
 @media (max-width: 768px) {
     .main_box {
-    @include flex-column-justify-align-centered;
-    row-gap: 10px;
+        @include flex-column-justify-align-centered;
+        row-gap: 10px;
     }
-    .elementfooter {
-    @include flex-column-align-centered;
 
-    margin-bottom: 0;    
-    } 
-    
+    .elementfooter {
+        @include flex-column-align-centered;
+
+        margin-bottom: 0;
+    }
+
     .iconbox img {
-    height: 60px;
+        height: 60px;
     }
+
     .w-75 {
-    width: 90% !important;
+        width: 90% !important;
     }
+
     .row-contacto {
-    width: 90%;
-    padding: 20px;
+        width: 90%;
+        padding: 20px;
     }
+
     .main_container_register {
-    height: 900px;
+        height: 900px;
     }
 }
+
 .main-preguntas {
     background: url(../img/Delantal\ de\ jean\ con\ cuero.jpg);
     opacity: 0.8;
     background-repeat: no-repeat;
 }
+
 .card {
-  height: 42rem;
-  
+    height: 42rem;
+
 }
+
 @media (min-width: 768px) {
-  .p-md-5 {
-    padding: 0 !important;
-  }
-  #fcf-form {
-    width: 100%;
-  }
+    .p-md-5 {
+        padding: 0 !important;
+    }
+
+    #fcf-form {
+        width: 100%;
+    }
 }
+
 .container-chaquetas {
     h1 {
         text-align: center;
@@ -505,6 +570,7 @@ h4 {
         margin: auto;
         padding: 5px 15px;
     }
+
     @include flex-column-align-centered;
     padding-top: 2rem;
     flex-wrap: wrap;
@@ -518,14 +584,15 @@ li {
     font-style: bolder;
     text-align: start;
 }
-.dropdown{
+
+.dropdown {
     z-index: 5;
 }
-@media (max-width: 620px) {
-    .card{
-        height: auto;
-        
-        }      
-    
-}
 
+@media (max-width: 620px) {
+    .card {
+        height: auto;
+
+    }
+
+}
